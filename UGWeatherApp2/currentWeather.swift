@@ -13,7 +13,16 @@ class CurrentWeather {
     var _date: String!
     var _weatherType: String!
     var _currentTemp: Double!
+    var _windSpeed: Double!
+    var _weatherIcon: String!
     
+    
+    var weatherIcon: String{
+        if _weatherIcon == nil {
+            _weatherIcon = ""
+        }
+        return _weatherIcon
+    }
     var cityName: String{
         if _cityName == nil{
             _cityName = ""
@@ -30,6 +39,12 @@ class CurrentWeather {
     var currentTemp: Double{
         if _currentTemp == nil {
             _currentTemp = 0.0
+        }
+        return _currentTemp
+    }
+    var windSpeed: Double{
+        if _windSpeed == nil {
+            _windSpeed = 0.0
         }
         return _currentTemp
     }
@@ -80,6 +95,25 @@ class CurrentWeather {
                         self._weatherType = weatherType
                         print(self._weatherType)
                     }
+                }
+                if let main = dict["current_observation"] as? Dictionary<String, AnyObject> {
+                    
+                    if let windSpeed = main["wind_mph"] as? Double {
+                        
+                        self._windSpeed = windSpeed
+                        print(self._windSpeed)
+                    }
+                    print(self.date)
+                }
+                
+                if let main = dict["current_observation"] as? Dictionary<String, AnyObject> {
+                    
+                    if let weatherIcon = main["icon_url"] as? String {
+                        
+                        self._weatherIcon = weatherIcon
+                        print(self._weatherIcon)
+                    }
+                    
                 }
             }
             completed()
