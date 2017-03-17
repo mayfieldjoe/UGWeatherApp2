@@ -39,5 +39,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Oswald-DemiBold.tff</string>
+		<string>Oswald-Regular.ttf</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location. To give you up to date weather infomation.</string>
 </dict>
 </plist>

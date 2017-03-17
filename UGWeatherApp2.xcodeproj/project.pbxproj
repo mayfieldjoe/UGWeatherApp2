@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		75832CC21749B49FFD88600F /* Pods_UGWeatherApp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D25DC1FD943E329852E4700 /* Pods_UGWeatherApp2.framework */; };
+		CE0CF0851E7ACA49005BFB9D /* Oswald-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0CF0831E7ACA49005BFB9D /* Oswald-DemiBold.ttf */; };
+		CE0CF0861E7ACA49005BFB9D /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0CF0841E7ACA49005BFB9D /* Oswald-Regular.ttf */; };
+		CE0CF0891E7B148E005BFB9D /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0CF0881E7B148E005BFB9D /* Forecast.swift */; };
+		CE0CF08B1E7B2B11005BFB9D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0CF08A1E7B2B11005BFB9D /* WeatherCell.swift */; };
+		CE0CF08D1E7B5D1C005BFB9D /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0CF08C1E7B5D1C005BFB9D /* location.swift */; };
 		CEB0D6D81E776E3400329006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0D6D71E776E3400329006 /* AppDelegate.swift */; };
 		CEB0D6DA1E776E3400329006 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0D6D91E776E3400329006 /* WeatherVC.swift */; };
 		CEB0D6DD1E776E3400329006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB0D6DB1E776E3400329006 /* Main.storyboard */; };
@@ -22,6 +27,11 @@
 		747B204AFA04EA7AA2A38D55 /* Pods-UGWeatherApp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGWeatherApp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-UGWeatherApp2/Pods-UGWeatherApp2.release.xcconfig"; sourceTree = "<group>"; };
 		9D25DC1FD943E329852E4700 /* Pods_UGWeatherApp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UGWeatherApp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95B968826E7950AFDD3F5BB /* Pods-UGWeatherApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGWeatherApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UGWeatherApp2/Pods-UGWeatherApp2.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0CF0831E7ACA49005BFB9D /* Oswald-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-DemiBold.ttf"; sourceTree = "<group>"; };
+		CE0CF0841E7ACA49005BFB9D /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		CE0CF0881E7B148E005BFB9D /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		CE0CF08A1E7B2B11005BFB9D /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		CE0CF08C1E7B5D1C005BFB9D /* location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
 		CEB0D6D41E776E3400329006 /* UGWeatherApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGWeatherApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB0D6D71E776E3400329006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB0D6D91E776E3400329006 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -63,6 +73,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE0CF0871E7ACA51005BFB9D /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0CF0831E7ACA49005BFB9D /* Oswald-DemiBold.ttf */,
+				CE0CF0841E7ACA49005BFB9D /* Oswald-Regular.ttf */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		CEB0D6CB1E776E3400329006 = {
 			isa = PBXGroup;
 			children = (
@@ -86,13 +105,17 @@
 			children = (
 				CEB0D6D71E776E3400329006 /* AppDelegate.swift */,
 				CEB0D6D91E776E3400329006 /* WeatherVC.swift */,
-				CEB0D6EC1E77709900329006 /* Constants.swift */,
-				CEB0D6DB1E776E3400329006 /* Main.storyboard */,
+				CE0CF08C1E7B5D1C005BFB9D /* location.swift */,
+				CE0CF0881E7B148E005BFB9D /* Forecast.swift */,
 				CEB0D6EE1E77722200329006 /* currentWeather.swift */,
+				CEB0D6EC1E77709900329006 /* Constants.swift */,
+				CE0CF08A1E7B2B11005BFB9D /* WeatherCell.swift */,
+				CEB0D6DB1E776E3400329006 /* Main.storyboard */,
 				CEB0D6E11E776E3500329006 /* Assets.xcassets */,
 				CEB0D6E31E776E3500329006 /* LaunchScreen.storyboard */,
 				CEB0D6E61E776E3500329006 /* Info.plist */,
 				CEB0D6DE1E776E3500329006 /* UGWeatherApp2.xcdatamodeld */,
+				CE0CF0871E7ACA51005BFB9D /* Files */,
 			);
 			path = UGWeatherApp2;
 			sourceTree = "<group>";
@@ -159,8 +182,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0CF0861E7ACA49005BFB9D /* Oswald-Regular.ttf in Resources */,
 				CEB0D6E51E776E3500329006 /* LaunchScreen.storyboard in Resources */,
 				CEB0D6E21E776E3500329006 /* Assets.xcassets in Resources */,
+				CE0CF0851E7ACA49005BFB9D /* Oswald-DemiBold.ttf in Resources */,
 				CEB0D6DD1E776E3400329006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +247,12 @@
 			files = (
 				CEB0D6DA1E776E3400329006 /* WeatherVC.swift in Sources */,
 				CEB0D6EF1E77722200329006 /* currentWeather.swift in Sources */,
+				CE0CF08D1E7B5D1C005BFB9D /* location.swift in Sources */,
 				CEB0D6E01E776E3500329006 /* UGWeatherApp2.xcdatamodeld in Sources */,
 				CEB0D6D81E776E3400329006 /* AppDelegate.swift in Sources */,
+				CE0CF0891E7B148E005BFB9D /* Forecast.swift in Sources */,
 				CEB0D6ED1E77709900329006 /* Constants.swift in Sources */,
+				CE0CF08B1E7B2B11005BFB9D /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class CurrentWeather {
     var _currentTemp: Double!
     var _windSpeed: Double!
     var _weatherIcon: String!
+    var _forecastHighTemp: Double!
     
     
     var weatherIcon: String{
@@ -23,6 +24,7 @@ class CurrentWeather {
         }
         return _weatherIcon
     }
+    
     var cityName: String{
         if _cityName == nil{
             _cityName = ""
@@ -61,14 +63,16 @@ class CurrentWeather {
         return _date
     }
     
+    
+    
     func downloadWeatherDetails(completed: @escaping DownloadComplete){
         //Alamofire download
         
-        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
-        Alamofire.request(currentWeatherURL).responseJSON { response in
+        //let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
+        Alamofire.request(CURRENT_WEATHER_URL).responseJSON { response in
             
             let result = response.result
-            
+            print(result)
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 if let main = dict["current_observation"]?["display_location"] as? Dictionary<String, AnyObject> {
@@ -120,5 +124,7 @@ class CurrentWeather {
         }
     }
 }
+
+
 
 
